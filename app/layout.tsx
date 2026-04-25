@@ -16,16 +16,15 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title:
-    "Bass by Jo — Bass Guitar Lessons for Beginners | Worship, Gospel and Beyond",
+    "Josiah Sid — Bass Guitar Lessons for Beginners | Worship, Gospel and Beyond",
   description:
-    "Learn bass guitar from scratch with structured virtual 1-to-1 lessons. Worship, gospel, and beyond. Book your free discovery call today.",
+    "Learn bass guitar from scratch with Josiah Sid. Structured virtual 1-to-1 lessons for beginners. Worship, gospel, and beyond. Book your free discovery call today.",
   openGraph: {
-    title:
-      "Bass by Jo — Bass Guitar Lessons for Beginners | Worship, Gospel and Beyond",
+    title: "Josiah Sid — Bass Guitar Lessons for Beginners",
     description:
-      "Learn bass guitar from scratch with structured virtual 1-to-1 lessons. Worship, gospel, and beyond. Book your free discovery call today.",
-    url: "https://bassbyjo.com",
-    siteName: "Bass by Jo",
+      "Learn bass guitar from scratch with Josiah Sid. Structured virtual 1-to-1 lessons for beginners. Worship, gospel, and beyond. Book your free discovery call today.",
+    url: "https://www.thejosiahsid.com",
+    siteName: "Josiah Sid",
     locale: "en_GB",
     type: "website",
   },

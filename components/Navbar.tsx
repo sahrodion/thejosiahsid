@@ -23,7 +23,7 @@ export default function Navbar() {
           className="font-playfair text-xl font-bold text-white"
           onClick={closeMenu}
         >
-          Bass by Jo
+          Josiah Sid
         </a>
 
         <div className="hidden items-center gap-8 md:flex">

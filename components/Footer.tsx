@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="grid gap-10 text-center md:grid-cols-3 md:text-left">
           <div>
             <a href="#top" className="font-playfair text-xl font-bold text-white">
-              Bass by Jo
+              Josiah Sid
             </a>
             <p className="mt-3 text-sm text-white-muted">
               Bass Guitar Lessons for Beginners | Worship, Gospel and Beyond
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 border-t border-black-700 pt-6 text-center text-sm text-accent-muted">
-          © 2026 Bass by Jo. All rights reserved.
+          © 2026 Josiah Sid. All rights reserved.
         </div>
       </motion.div>
     </footer>
