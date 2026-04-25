@@ -122,18 +122,18 @@ export default function Contact() {
             </h3>
             <div className="mt-8 space-y-5">
               <a
-                href="https://wa.me/PHONE_PLACEHOLDER"
+                href="https://wa.me/447438164744?text=Hi%20Josiah%2C%20I%27m%20interested%20in%20bass%20lessons"
                 className="flex items-center gap-4 rounded-xl border border-black-700 p-4 transition hover:border-white hover:bg-black-700"
               >
                 <MessageCircle className="h-6 w-6 text-white" />
                 <span className="font-medium text-white">Message on WhatsApp</span>
               </a>
               <a
-                href="mailto:jo@thejosiahsid.com"
+                href="mailto:thejosiahsidbass@gmail.com"
                 className="flex items-center gap-4 rounded-xl border border-black-700 p-4 transition hover:border-white hover:bg-black-700"
               >
                 <Mail className="h-6 w-6 text-white" />
-                <span className="font-medium text-white">jo@thejosiahsid.com</span>
+                <span className="font-medium text-white">thejosiahsidbass@gmail.com</span>
               </a>
             </div>
             <p className="mt-8 text-white-muted">
