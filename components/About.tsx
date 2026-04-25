@@ -33,8 +33,12 @@ export default function About() {
         className="section-shell grid items-center gap-12 lg:grid-cols-2"
       >
         <motion.div variants={fadeUp}>
-          <div className="flex aspect-square items-center justify-center rounded-2xl border-2 border-white bg-black-800 text-accent-muted shadow-glow">
-            [Your Photo]
+          <div className="aspect-square overflow-hidden rounded-2xl border-2 border-white bg-black-800 shadow-glow">
+            <img
+              src="/josiah-sid-about.png"
+              alt="Portrait of Josiah Sid"
+              className="h-full w-full object-cover object-top"
+            />
           </div>
         </motion.div>
 
