@@ -66,7 +66,7 @@ export default function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="rounded-full border border-black-700 p-3 text-white-muted transition hover:border-white hover:text-white"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-black-700 text-white-muted transition hover:border-white hover:text-white"
                 >
                   <Icon className="h-5 w-5" />
                 </a>

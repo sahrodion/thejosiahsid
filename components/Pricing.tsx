@@ -66,11 +66,11 @@ export default function Pricing() {
               whileTap={{ scale: 0.98 }}
               className="mt-8 flex w-full justify-center rounded-full bg-white py-4 font-semibold text-black-950 transition hover:bg-white-off"
             >
-              Book Your Free 15-Min Chat
+              Book Your Free 20-Min Chat
             </motion.a>
           </div>
           <p className="mt-4 text-center text-sm text-white-muted">
-            First session is a free 15-minute discovery call — no commitment,
+            First session is a free 20-minute discovery call — no commitment,
             just a conversation.
           </p>
         </motion.div>

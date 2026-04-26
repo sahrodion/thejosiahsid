@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -12,11 +12,33 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
 
   const closeMenu = () => setIsOpen(false);
 
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    const handlePointerDown = (event: PointerEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+    };
+  }, [isOpen]);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-black-950/85 backdrop-blur-xl">
+    <header
+      ref={navRef}
+      className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-black-950/85 backdrop-blur-xl"
+    >
       <nav className="section-shell flex h-20 items-center justify-between">
         <a
           href="#top"

@@ -71,7 +71,7 @@ export default function Hero() {
             whileTap={{ scale: 0.98 }}
             className="inline-flex rounded-full bg-white px-8 py-4 text-lg font-semibold text-black-950 transition hover:bg-white-off"
           >
-            Book Your Free 15-Min Chat
+            Book Your Free 20-Min Chat
           </motion.a>
         </motion.div>
         <motion.p variants={fadeUp} className="mt-4 text-sm text-accent-muted">

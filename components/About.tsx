@@ -20,7 +20,7 @@ const container: Variants = {
   },
 };
 
-const stats = ["100% Virtual", "Beginner Focused", "Church Specialist"];
+const stats = ["100% Virtual", "Beginner Focused"];
 
 export default function About() {
   return (
@@ -48,7 +48,7 @@ export default function About() {
             Who You're Learning From
           </h2>
           <h3 className="mt-7 font-playfair text-3xl font-bold text-white">
-            Jo Sid
+            Josiah Sid
           </h3>
 
           <div className="mt-6 space-y-4 leading-relaxed text-white-muted">

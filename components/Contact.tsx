@@ -85,7 +85,7 @@ export default function Contact() {
             Let's Get Started
           </h2>
           <p className="mt-5 text-lg leading-8 text-white-muted">
-            Book your free 15-minute discovery call. No commitment — just a
+            Book your free 20-minute discovery call. No commitment — just a
             conversation about where you are and where you want to get to.
           </p>
         </motion.div>
