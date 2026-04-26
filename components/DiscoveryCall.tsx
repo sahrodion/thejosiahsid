@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
+import Link from "next/link";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -22,31 +23,26 @@ const container: Variants = {
 
 const steps = [
   {
-    time: "Mins 1–3",
     title: "Where You Are Now",
     description:
       "We talk through your current level, experience, and what you've tried before. No judgement — just context.",
   },
   {
-    time: "Mins 4–8",
     title: "Where You Want to Get To",
     description:
       "Your goals, your timeline, and what playing bass actually means to you.",
   },
   {
-    time: "Mins 9–14",
     title: "Your Personal Roadmap",
     description:
       "I map out exactly what your first 8 weeks would look like based on everything you've told me.",
   },
   {
-    time: "Mins 15–19",
     title: "Your Questions",
     description:
       "Ask me anything about lessons, process, pricing, or what to expect.",
   },
   {
-    time: "Minute 20",
     title: "Next Steps",
     description:
       "If it feels right, we book your first lesson. No pressure, no obligation either way.",
@@ -55,7 +51,7 @@ const steps = [
 
 export default function DiscoveryCall() {
   return (
-    <section className="section-padding bg-black-900">
+    <section id="discovery-call" className="section-padding bg-black-900">
       <motion.div
         variants={container}
         initial="hidden"
@@ -75,15 +71,21 @@ export default function DiscoveryCall() {
           </p>
         </motion.div>
 
-        <div className="mt-14 grid gap-5 lg:grid-cols-5">
+        <motion.p
+          variants={fadeUp}
+          className="mb-8 mt-14 text-center text-lg font-semibold text-white"
+        >
+          Here's what we cover on the call
+        </motion.p>
+
+        <div className="grid gap-5 lg:grid-cols-5">
           {steps.map((step) => (
             <motion.article
-              key={step.time}
+              key={step.title}
               variants={fadeUp}
               className="rounded-xl border border-white bg-black-800 p-6"
             >
-              <p className="font-bold text-white">{step.time}</p>
-              <h3 className="mt-4 text-xl font-semibold text-white">
+              <h3 className="text-xl font-semibold text-white">
                 {step.title}
               </h3>
               <p className="mt-3 leading-7 text-white-muted">
@@ -94,17 +96,20 @@ export default function DiscoveryCall() {
         </div>
 
         <motion.div variants={fadeUp} className="mt-10 text-center">
-          <motion.a
-            href="#contact"
+          <motion.div
             whileHover={{
               scale: 1.03,
               boxShadow: "0 0 30px rgba(255, 255, 255, 0.22)",
             }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex rounded-full bg-white px-8 py-4 font-semibold text-black-950 transition hover:bg-white-off"
           >
-            Book Your Free Bass Roadmap Call
-          </motion.a>
+            <Link
+              href="/services#contact"
+              className="inline-flex rounded-full bg-white px-8 py-4 font-semibold text-black-950 transition hover:bg-white-off"
+            >
+              Book Your Free Bass Roadmap Call
+            </Link>
+          </motion.div>
         </motion.div>
       </motion.div>
     </section>

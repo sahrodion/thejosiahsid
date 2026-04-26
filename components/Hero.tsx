@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
+import Link from "next/link";
 
 const container: Variants = {
   hidden: {},
@@ -65,14 +66,25 @@ export default function Hero() {
           and built around the music you actually want to play.
         </motion.p>
         <motion.div variants={fadeUp} className="mt-10">
-          <motion.a
-            href="#contact"
+          <motion.div
             whileHover={{ scale: 1.04, boxShadow: "0 0 36px rgba(255, 255, 255, 0.24)" }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex rounded-full bg-white px-8 py-4 text-lg font-semibold text-black-950 transition hover:bg-white-off"
           >
-            Book Your Free 20-Min Chat
-          </motion.a>
+            <Link
+              href="#discovery-call"
+              className="inline-flex rounded-full bg-white px-8 py-4 text-lg font-semibold text-black-950 transition hover:bg-white-off"
+            >
+              Book Your Free 20-Min Chat
+            </Link>
+          </motion.div>
+        </motion.div>
+        <motion.div variants={fadeUp} className="mt-3">
+          <Link
+            href="/services"
+            className="text-sm text-accent-muted underline-offset-4 transition hover:underline"
+          >
+            Want to explore all services first? →
+          </Link>
         </motion.div>
         <motion.p variants={fadeUp} className="mt-4 text-sm text-accent-muted">
           No experience needed. No gear required to start.

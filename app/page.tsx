@@ -1,15 +1,18 @@
-import About from "@/components/About";
-import Contact from "@/components/Contact";
+import type { Metadata } from "next";
+import CTABanner from "@/components/CTABanner";
 import Curriculum from "@/components/Curriculum";
 import DiscoveryCall from "@/components/DiscoveryCall";
-import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import FreeGuide from "@/components/FreeGuide";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import Services from "@/components/Services";
-import Testimonials from "@/components/Testimonials";
-import WhoIsThisFor from "@/components/WhoIsThisFor";
+
+export function generateMetadata(): Metadata {
+  return {
+    title:
+      "Josiah Sid — Bass Guitar Lessons for Beginners | Worship, Gospel and Beyond",
+  };
+}
 
 export default function Home() {
   return (
@@ -17,14 +20,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <DiscoveryCall />
-      <WhoIsThisFor />
       <Curriculum />
-      <About />
-      <Services />
-      <Testimonials />
       <FreeGuide />
-      <FAQ />
-      <Contact />
+      <CTABanner />
       <Footer />
     </main>
   );

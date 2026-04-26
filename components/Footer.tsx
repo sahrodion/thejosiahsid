@@ -2,6 +2,7 @@
 
 import { motion, type Variants } from "framer-motion";
 import { Instagram, Music2, Youtube } from "lucide-react";
+import Link from "next/link";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -13,10 +14,10 @@ const fadeUp: Variants = {
 };
 
 const links = [
-  { label: "About", href: "#about" },
-  { label: "Curriculum", href: "#curriculum" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Book a Lesson", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "About", href: "/about" },
+  { label: "Book a Call", href: "/services#contact" },
 ];
 
 const socials = [
@@ -37,9 +38,9 @@ export default function Footer() {
       >
         <div className="grid gap-10 text-center md:grid-cols-3 md:text-left">
           <div>
-            <a href="#top" className="font-playfair text-xl font-bold text-white">
+            <Link href="/" className="font-playfair text-xl font-bold text-white">
               Josiah Sid
-            </a>
+            </Link>
             <p className="mt-3 text-sm text-white-muted">
               Bass Guitar Lessons for Beginners | Worship, Gospel and Beyond
             </p>
@@ -47,13 +48,13 @@ export default function Footer() {
 
           <div className="space-y-2 text-sm text-white-muted">
             {links.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="block transition hover:text-white"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 

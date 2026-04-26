@@ -1,0 +1,35 @@
+"use client";
+
+import { motion, type Variants } from "framer-motion";
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+export default function ServicesHero() {
+  return (
+    <section className="bg-black-950 py-32">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={fadeUp}
+        className="section-shell text-center"
+      >
+        <p className="section-label">Work With Me</p>
+        <h1 className="mt-4 font-playfair text-5xl font-bold text-white">
+          Choose Your Path
+        </h1>
+        <p className="mx-auto mt-5 max-w-2xl text-xl leading-8 text-white-muted">
+          From your very first note to stage-ready confidence — find the right
+          service for where you are right now.
+        </p>
+      </motion.div>
+    </section>
+  );
+}

@@ -2,6 +2,7 @@
 
 import { motion, type Variants } from "framer-motion";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -169,17 +170,21 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
-              <motion.a
-                href="#contact"
+              <motion.div
                 whileHover={{
                   scale: 1.03,
                   boxShadow: "0 0 30px rgba(255, 255, 255, 0.22)",
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="mt-8 flex w-full justify-center rounded-full bg-white py-4 font-semibold text-black-950 transition hover:bg-white-off"
+                className="mt-8"
               >
-                {service.cta}
-              </motion.a>
+                <Link
+                  href="#contact"
+                  className="flex w-full justify-center rounded-full bg-white py-4 font-semibold text-black-950 transition hover:bg-white-off"
+                >
+                  {service.cta}
+                </Link>
+              </motion.div>
             </motion.article>
           ))}
         </div>
