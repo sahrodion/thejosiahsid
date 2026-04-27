@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, CheckCircle, Download } from "lucide-react";
 import { ChangeEvent, FormEvent, useState } from "react";
 
 const fadeUp: Variants = {
@@ -57,10 +57,10 @@ export default function FreeGuide() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "784670d9-86c8-44c8-a22e-f271e4f89080",
+          access_key: "04b85a11-b6c6-4d4e-9be0-fe1097e24515",
           name: formData.name,
           email: formData.email,
-          subject: "Bass Buying Guide Download Request",
+          subject: "Bass Buying Guide Download — New Lead",
         }),
       });
 
@@ -74,6 +74,7 @@ export default function FreeGuide() {
     }
   };
 
+  // Place bass-buying-guide.pdf in /public folder
   return (
     <section className="section-padding bg-black-950">
       <motion.div
@@ -102,6 +103,17 @@ export default function FreeGuide() {
             ))}
           </ul>
 
+          <p className="mt-4 text-xs text-[#666666]">
+            Already have it?{" "}
+            <a
+              href="/bass-buying-guide.pdf"
+              download="The-Beginners-Bass-Buying-Guide.pdf"
+              className="underline transition-colors hover:text-white"
+            >
+              Download directly here
+            </a>
+          </p>
+
           <p className="mt-6 italic text-white-muted">
             "I've helped students set up their first rig properly — this guide
             is everything I tell them."
@@ -109,7 +121,26 @@ export default function FreeGuide() {
 
           {submitted ? (
             <div className="mt-8 rounded-xl border border-white bg-black-800 p-5 text-white">
-              Check your inbox — the guide is on its way!
+              <CheckCircle className="mx-auto text-white" size={48} />
+              <h3 className="mt-4 text-center font-playfair text-2xl font-bold text-white">
+                Your guide is ready.
+              </h3>
+              <p className="mt-2 text-center text-white-muted">
+                Click below to download your free copy of The Beginner's Bass
+                Buying Guide.
+              </p>
+              <a
+                href="/bass-buying-guide.pdf"
+                download="The-Beginners-Bass-Buying-Guide.pdf"
+                target="_blank"
+                className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-white px-8 py-4 font-semibold text-black-950"
+              >
+                <Download className="h-5 w-5" />
+                Download Your Free Guide
+              </a>
+              <p className="mt-3 text-center text-xs text-white-muted">
+                PDF — Free to keep and share.
+              </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="mt-8 space-y-4">
