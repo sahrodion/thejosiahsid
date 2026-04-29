@@ -78,20 +78,20 @@ function AudienceCard({
       variants={fadeUp}
       whileHover={{
         y: -4,
-        boxShadow: "0 0 28px rgba(255, 255, 255, 0.16)",
+        boxShadow: "0 4px 24px rgba(200, 133, 58, 0.15)",
       }}
-      className={`rounded-xl border-l-4 border-white bg-black-800 transition ${card.className}`}
+      className={`rounded-xl border-l-4 border-amber bg-espresso-800 transition-all duration-300 hover:border-amber/60 ${card.className}`}
     >
-      <Icon className="h-8 w-8 text-white" aria-hidden="true" />
-      <h3 className="mt-5 text-xl font-semibold text-white">{card.title}</h3>
-      <p className="mt-3 leading-7 text-white-muted">{card.description}</p>
+      <Icon className="h-8 w-8 text-amber" aria-hidden="true" />
+      <h3 className="mt-5 font-playfair text-xl font-semibold text-parchment">{card.title}</h3>
+      <p className="mt-3 leading-7 text-parchment-muted">{card.description}</p>
     </motion.article>
   );
 }
 
 export default function WhoIsThisFor() {
   return (
-    <section className="section-padding bg-black-950">
+    <section className="section-padding bg-espresso-950">
       <motion.div
         variants={container}
         initial="hidden"
@@ -104,7 +104,7 @@ export default function WhoIsThisFor() {
         </motion.p>
         <motion.h2
           variants={fadeUp}
-          className="mt-4 font-playfair text-4xl font-bold text-white md:text-6xl"
+          className="mt-4 font-playfair text-4xl font-bold text-parchment md:text-6xl"
         >
           This Is For You If...
         </motion.h2>

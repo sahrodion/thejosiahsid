@@ -13,7 +13,7 @@ const fadeUp: Variants = {
 
 export default function AboutHero() {
   return (
-    <section className="bg-black-950 py-32">
+    <section className="bg-espresso-950 py-32">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -22,10 +22,10 @@ export default function AboutHero() {
         className="section-shell text-center"
       >
         <p className="section-label">The Teacher</p>
-        <h1 className="mt-4 font-playfair text-5xl font-bold text-white">
+        <h1 className="mt-4 font-playfair text-5xl font-bold text-parchment">
           About Josiah Sid
         </h1>
-        <p className="mx-auto mt-5 max-w-2xl text-xl leading-8 text-white-muted">
+        <p className="mx-auto mt-5 max-w-2xl text-xl leading-8 text-parchment-muted">
           Bass player, teacher, and believer that anyone can learn to play if
           they have the right guidance and a clear plan.
         </p>

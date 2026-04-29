@@ -16,7 +16,7 @@ export function generateMetadata(): Metadata {
 
 export default function Home() {
   return (
-    <main className="overflow-hidden bg-black-950">
+    <main className="overflow-hidden bg-espresso-950">
       <Navbar />
       <Hero />
       <DiscoveryCall />

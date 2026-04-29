@@ -8,30 +8,36 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        black: {
-          950: "#000000",
-          900: "#0a0a0a",
-          800: "#111111",
-          700: "#1a1a1a",
-          600: "#222222",
+        espresso: {
+          950: "#0d0805",
+          900: "#1a0f0a",
+          800: "#2a1a12",
+          700: "#3d2518",
+          600: "#52311f",
         },
-        white: {
-          DEFAULT: "#ffffff",
-          off: "#f0f0f0",
-          muted: "#a0a0a0",
+        mahogany: {
+          DEFAULT: "#6b2d1a",
+          light: "#8b3d25",
+          dark: "#4a1f10",
         },
-        accent: {
-          DEFAULT: "#ffffff",
-          muted: "#666666",
-          subtle: "#333333",
+        amber: {
+          DEFAULT: "#c8853a",
+          light: "#e09a50",
+          muted: "#8c6a4f",
         },
+        parchment: {
+          DEFAULT: "#f0e6d3",
+          muted: "#b8a898",
+          dark: "#8c7a6a",
+        },
+        walnut: "#0d0805",
       },
       fontFamily: {
         inter: ["var(--font-inter)", "sans-serif"],
         playfair: ["var(--font-playfair)", "serif"],
       },
       boxShadow: {
-        glow: "0 0 32px rgba(255, 255, 255, 0.18)",
+        glow: "0 0 32px rgba(200, 133, 58, 0.18)",
       },
     },
   },

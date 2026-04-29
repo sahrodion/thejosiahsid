@@ -15,7 +15,7 @@ export function generateMetadata(): Metadata {
 
 export default function AboutPage() {
   return (
-    <main className="overflow-hidden bg-black-950">
+    <main className="overflow-hidden bg-espresso-950">
       <Navbar />
       <AboutHero />
       <About />

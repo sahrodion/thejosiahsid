@@ -51,7 +51,7 @@ const steps = [
 
 export default function DiscoveryCall() {
   return (
-    <section id="discovery-call" className="section-padding bg-black-900">
+    <section id="discovery-call" className="section-padding bg-espresso-900">
       <motion.div
         variants={container}
         initial="hidden"
@@ -61,10 +61,10 @@ export default function DiscoveryCall() {
       >
         <motion.div variants={fadeUp} className="mx-auto max-w-3xl text-center">
           <p className="section-label">Free 20-Minute Call</p>
-          <h2 className="mt-4 font-playfair text-4xl font-bold text-white md:text-6xl">
+          <h2 className="mt-4 font-playfair text-4xl font-bold text-parchment md:text-6xl">
             Your Free Bass Roadmap Call
           </h2>
-          <p className="mt-5 text-lg leading-8 text-white-muted">
+          <p className="mt-5 text-lg leading-8 text-parchment-muted">
             This isn't a sales call. It's a structured 20-minute session where
             you leave with a clear picture of exactly what your bass journey
             looks like.
@@ -73,7 +73,7 @@ export default function DiscoveryCall() {
 
         <motion.p
           variants={fadeUp}
-          className="mb-8 mt-14 text-center text-lg font-semibold text-white"
+          className="mb-8 mt-14 text-center text-lg font-semibold text-parchment"
         >
           Here's what we cover on the call
         </motion.p>
@@ -83,12 +83,12 @@ export default function DiscoveryCall() {
             <motion.article
               key={step.title}
               variants={fadeUp}
-              className="rounded-xl border border-white bg-black-800 p-6"
+              className="rounded-xl border border-mahogany/50 border-l-4 border-l-amber bg-espresso-800 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber/60 hover:shadow-[0_4px_24px_rgba(200,133,58,0.15)]"
             >
-              <h3 className="text-xl font-semibold text-white">
+              <h3 className="font-playfair text-xl font-semibold text-parchment">
                 {step.title}
               </h3>
-              <p className="mt-3 leading-7 text-white-muted">
+              <p className="mt-3 leading-7 text-parchment-muted">
                 {step.description}
               </p>
             </motion.article>
@@ -99,13 +99,13 @@ export default function DiscoveryCall() {
           <motion.div
             whileHover={{
               scale: 1.03,
-              boxShadow: "0 0 30px rgba(255, 255, 255, 0.22)",
+              boxShadow: "0 0 20px rgba(200, 133, 58, 0.3)",
             }}
             whileTap={{ scale: 0.98 }}
           >
             <Link
               href="/services#contact"
-              className="inline-flex rounded-full bg-white px-8 py-4 font-semibold text-black-950 transition hover:bg-white-off"
+              className="inline-flex rounded-full border border-amber/40 bg-mahogany px-8 py-4 font-semibold text-parchment transition-all duration-300 hover:border-amber hover:bg-mahogany-light"
             >
               Book Your Free Bass Roadmap Call
             </Link>

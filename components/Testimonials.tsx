@@ -40,7 +40,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="section-padding bg-black-950">
+    <section className="section-padding bg-espresso-900">
       <motion.div
         variants={container}
         initial="hidden"
@@ -50,10 +50,10 @@ export default function Testimonials() {
       >
         <motion.div variants={fadeUp} className="mx-auto max-w-3xl text-center">
           <p className="section-label">Student Results</p>
-          <h2 className="mt-4 font-playfair text-4xl font-bold text-white md:text-6xl">
+          <h2 className="mt-4 font-playfair text-4xl font-bold text-parchment md:text-6xl">
             What Students Say
           </h2>
-          <p className="mt-5 text-lg text-white-muted">
+          <p className="mt-5 text-lg text-parchment-muted">
             Early students. Real feedback.
           </p>
         </motion.div>
@@ -63,13 +63,13 @@ export default function Testimonials() {
             <motion.article
               key={testimonial.name}
               variants={fadeUp}
-              className="rounded-xl border-l-4 border-white bg-black-800 p-6"
+              className="rounded-xl border-l-4 border-amber bg-espresso-800 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber/60 hover:shadow-[0_4px_24px_rgba(200,133,58,0.15)]"
             >
-              <div className="font-playfair text-6xl leading-none text-white">
+              <div className="font-playfair text-6xl leading-none text-amber">
                 "
               </div>
-              <p className="mt-2 leading-7 text-white">{testimonial.quote}</p>
-              <p className="mt-6 text-sm font-semibold text-white-muted">
+              <p className="mt-2 leading-7 text-parchment">{testimonial.quote}</p>
+              <p className="mt-6 text-sm font-semibold text-parchment-dark">
                 — {testimonial.name}
               </p>
             </motion.article>
@@ -78,7 +78,7 @@ export default function Testimonials() {
 
         <motion.p
           variants={fadeUp}
-          className="mt-6 text-center text-sm italic text-white-muted"
+          className="mt-6 text-center text-sm italic text-parchment-muted"
         >
           *Testimonials from founding students.
         </motion.p>

@@ -28,7 +28,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-black-700 bg-black-950 py-12">
+    <footer className="border-t border-mahogany/40 bg-espresso-950 py-12">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -38,20 +38,20 @@ export default function Footer() {
       >
         <div className="grid gap-10 text-center md:grid-cols-3 md:text-left">
           <div>
-            <Link href="/" className="font-playfair text-xl font-bold text-white">
+            <Link href="/" className="font-playfair text-xl font-bold text-amber">
               Josiah Sid
             </Link>
-            <p className="mt-3 text-sm text-white-muted">
+            <p className="mt-3 text-sm text-parchment-muted">
               Bass Guitar Lessons for Beginners | Worship, Gospel and Beyond
             </p>
           </div>
 
-          <div className="space-y-2 text-sm text-white-muted">
+          <div className="space-y-2 text-sm text-parchment-muted">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block transition hover:text-white"
+                className="block transition hover:text-amber"
               >
                 {link.label}
               </Link>
@@ -67,7 +67,7 @@ export default function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-black-700 text-white-muted transition hover:border-white hover:text-white"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-mahogany/40 text-parchment-muted transition hover:border-amber hover:text-amber"
                 >
                   <Icon className="h-5 w-5" />
                 </a>
@@ -76,7 +76,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-black-700 pt-6 text-center text-sm text-accent-muted">
+        <div className="mt-10 border-t border-mahogany/40 pt-6 text-center text-sm text-parchment-dark">
           © 2026 Josiah Sid. All rights reserved.
         </div>
       </motion.div>

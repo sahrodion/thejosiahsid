@@ -13,7 +13,7 @@ const fadeUp: Variants = {
 
 export default function ServicesHero() {
   return (
-    <section className="bg-black-950 py-32">
+    <section className="bg-espresso-950 py-32">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -22,10 +22,10 @@ export default function ServicesHero() {
         className="section-shell text-center"
       >
         <p className="section-label">Work With Me</p>
-        <h1 className="mt-4 font-playfair text-5xl font-bold text-white">
+        <h1 className="mt-4 font-playfair text-5xl font-bold text-parchment">
           Choose Your Path
         </h1>
-        <p className="mx-auto mt-5 max-w-2xl text-xl leading-8 text-white-muted">
+        <p className="mx-auto mt-5 max-w-2xl text-xl leading-8 text-parchment-muted">
           From your very first note to stage-ready confidence — find the right
           service for where you are right now.
         </p>

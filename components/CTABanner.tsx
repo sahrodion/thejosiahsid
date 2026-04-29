@@ -14,7 +14,7 @@ const fadeUp: Variants = {
 
 export default function CTABanner() {
   return (
-    <section className="bg-white py-24 text-black-950">
+    <section className="bg-mahogany py-24 text-parchment">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -22,23 +22,23 @@ export default function CTABanner() {
         variants={fadeUp}
         className="section-shell text-center"
       >
-        <h2 className="font-playfair text-5xl font-bold text-black-950">
+        <h2 className="font-playfair text-5xl font-bold text-parchment">
           Ready to Start Playing?
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-xl text-black-950/70">
+        <p className="mx-auto mt-4 max-w-2xl text-xl text-parchment/70">
           Book your free 20-minute Bass Roadmap Call today. No commitment —
           just clarity on exactly where to start.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link
             href="/services#contact"
-            className="rounded-full bg-black-950 px-8 py-4 font-semibold text-white"
+            className="rounded-full bg-amber px-8 py-4 font-semibold text-espresso-950 transition-all duration-300 hover:bg-amber-light hover:shadow-[0_0_20px_rgba(200,133,58,0.3)]"
           >
             Book Your Free Call
           </Link>
           <Link
             href="/services"
-            className="rounded-full border-2 border-black-950 px-8 py-4 font-semibold text-black-950"
+            className="rounded-full border-2 border-parchment px-8 py-4 font-semibold text-parchment transition-all duration-300 hover:bg-parchment/20"
           >
             View Services
           </Link>

@@ -50,7 +50,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="section-padding bg-black-900">
+    <section className="section-padding bg-espresso-950">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -59,7 +59,7 @@ export default function FAQ() {
       >
         <motion.div variants={fadeUp} className="mx-auto max-w-3xl text-center">
           <p className="section-label">Questions</p>
-          <h2 className="mt-4 font-playfair text-4xl font-bold text-white md:text-6xl">
+          <h2 className="mt-4 font-playfair text-4xl font-bold text-parchment md:text-6xl">
             Common Questions
           </h2>
         </motion.div>
@@ -71,16 +71,16 @@ export default function FAQ() {
             return (
               <div
                 key={faq.question}
-                className="overflow-hidden rounded-xl border border-black-700 bg-black-800"
+                className="overflow-hidden rounded-xl border border-mahogany/30 bg-espresso-800 transition-all duration-300 hover:-translate-y-1 hover:border-amber/60 hover:shadow-[0_4px_24px_rgba(200,133,58,0.15)]"
               >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? -1 : index)}
-                  className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-medium text-white"
+                  className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-playfair font-medium text-parchment"
                 >
                   <span>{faq.question}</span>
                   <ChevronDown
-                    className={`h-5 w-5 flex-none text-white transition-transform ${
+                    className={`h-5 w-5 flex-none text-amber transition-transform ${
                       isOpen ? "rotate-180" : ""
                     }`}
                     aria-hidden="true"
@@ -95,7 +95,7 @@ export default function FAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.28, ease: "easeOut" }}
                     >
-                      <p className="px-6 pb-5 leading-7 text-white-muted">
+                      <p className="px-6 pb-5 leading-7 text-parchment-muted">
                         {faq.answer}
                       </p>
                     </motion.div>

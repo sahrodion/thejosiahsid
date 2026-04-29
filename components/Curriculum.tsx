@@ -65,7 +65,7 @@ const weeks = [
 
 export default function Curriculum() {
   return (
-    <section id="curriculum" className="section-padding bg-black-900">
+    <section id="curriculum" className="section-padding bg-espresso-950">
       <motion.div
         variants={container}
         initial="hidden"
@@ -75,17 +75,17 @@ export default function Curriculum() {
       >
         <motion.div variants={fadeUp} className="mx-auto max-w-3xl text-center">
           <p className="section-label">The Journey</p>
-          <h2 className="mt-4 font-playfair text-4xl font-bold text-white md:text-6xl">
+          <h2 className="mt-4 font-playfair text-4xl font-bold text-parchment md:text-6xl">
             Your 8-Week Programme
           </h2>
-          <p className="mt-5 text-lg leading-8 text-white-muted">
+          <p className="mt-5 text-lg leading-8 text-parchment-muted">
             A structured path from complete beginner to confidently playing
             worship songs.
           </p>
         </motion.div>
 
         <div className="relative mt-16">
-          <div className="absolute left-5 top-0 h-full w-px bg-white/15 md:left-1/2 md:w-[2px] md:-translate-x-1/2" />
+          <div className="absolute left-5 top-0 h-full w-px bg-mahogany/40 md:left-1/2 md:w-[2px] md:-translate-x-1/2" />
 
           <div className="space-y-8">
             {weeks.map((week, index) => {
@@ -100,21 +100,21 @@ export default function Curriculum() {
                     isEven ? "" : "md:[&>article]:col-start-2"
                   }`}
                 >
-                  <div className="absolute left-0 top-6 z-10 flex h-10 w-10 items-center justify-center rounded-full border-4 border-black-900 bg-white text-sm font-bold text-black-950 md:left-1/2 md:-translate-x-1/2">
+                  <div className="absolute left-0 top-6 z-10 flex h-10 w-10 items-center justify-center rounded-full border-4 border-amber/40 bg-mahogany text-sm font-bold text-parchment md:left-1/2 md:-translate-x-1/2">
                     {weekNumber}
                   </div>
                   <article
-                    className={`rounded-xl bg-black-800 p-6 shadow-2xl shadow-black-950/10 ${
+                    className={`rounded-xl border border-mahogany/40 bg-espresso-800 p-6 shadow-2xl shadow-espresso-950/10 transition-all duration-300 hover:-translate-y-1 hover:border-amber/60 hover:shadow-[0_4px_24px_rgba(200,133,58,0.15)] ${
                       isEven ? "md:mr-10" : "md:ml-10"
                     }`}
                   >
-                    <p className="text-sm font-semibold uppercase tracking-[0.22em] text-white">
+                    <p className="font-playfair text-sm font-semibold italic tracking-widest text-amber">
                       Week {weekNumber}
                     </p>
-                    <h3 className="mt-3 text-2xl font-semibold text-white">
+                    <h3 className="mt-3 font-playfair text-2xl font-semibold text-parchment">
                       {week.title}
                     </h3>
-                    <p className="mt-3 leading-7 text-white-muted">
+                    <p className="mt-3 leading-7 text-parchment-muted">
                       {week.description}
                     </p>
                   </article>

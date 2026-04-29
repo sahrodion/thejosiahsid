@@ -40,12 +40,12 @@ export default function Navbar() {
   return (
     <header
       ref={navRef}
-      className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-black-950/85 backdrop-blur-xl"
+      className="fixed inset-x-0 top-0 z-50 border-b border-mahogany/30 bg-espresso-950/85 backdrop-blur-xl"
     >
       <nav className="section-shell flex h-20 items-center justify-between">
         <Link
           href="/"
-          className="font-playfair text-xl font-bold text-white"
+          className="font-playfair text-xl font-bold text-amber"
           onClick={closeMenu}
         >
           Josiah Sid
@@ -59,10 +59,10 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`border-b-2 text-sm font-medium transition hover:text-white ${
+                className={`border-b-2 text-sm font-medium transition hover:text-parchment ${
                   isActive
-                    ? "border-white text-white"
-                    : "border-transparent text-white-muted"
+                    ? "border-amber text-amber"
+                    : "border-transparent text-parchment-muted"
                 }`}
               >
                 {link.label}
@@ -70,12 +70,12 @@ export default function Navbar() {
             );
           })}
           <motion.div
-            whileHover={{ scale: 1.04, boxShadow: "0 0 28px rgba(255, 255, 255, 0.22)" }}
+            whileHover={{ scale: 1.04, boxShadow: "0 0 20px rgba(200, 133, 58, 0.3)" }}
             whileTap={{ scale: 0.98 }}
           >
             <Link
               href="/services#contact"
-              className="block rounded-full bg-white px-5 py-2 font-semibold text-black-950 transition hover:bg-white-off"
+              className="block rounded-full border border-amber/40 bg-mahogany px-5 py-2 font-semibold text-parchment transition-all duration-300 hover:border-amber hover:bg-mahogany-light"
             >
               Book Free Call
             </Link>
@@ -87,7 +87,7 @@ export default function Navbar() {
           aria-label="Toggle navigation menu"
           aria-expanded={isOpen}
           onClick={() => setIsOpen((current) => !current)}
-          className="rounded-full border border-black-700 p-2 text-white md:hidden"
+          className="rounded-full border border-mahogany/50 p-2 text-parchment md:hidden"
         >
           {isOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -100,7 +100,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="border-t border-white/5 bg-black-950/95 px-6 pb-6 pt-4 backdrop-blur-xl md:hidden"
+            className="border-t border-mahogany/30 bg-espresso-950/95 px-6 pb-6 pt-4 backdrop-blur-xl md:hidden"
           >
             <div className="mx-auto flex max-w-6xl flex-col gap-4">
               {navLinks.map((link) => {
@@ -111,10 +111,10 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={closeMenu}
-                    className={`rounded-xl border-b-2 px-4 py-3 transition hover:bg-black-800 hover:text-white ${
+                    className={`rounded-xl border-b-2 px-4 py-3 transition hover:bg-espresso-800 hover:text-parchment ${
                       isActive
-                        ? "border-white text-white"
-                        : "border-transparent text-white-muted"
+                        ? "border-amber text-amber"
+                        : "border-transparent text-parchment-muted"
                     }`}
                   >
                     {link.label}
@@ -123,12 +123,12 @@ export default function Navbar() {
               })}
               <motion.div
                 onClick={closeMenu}
-                whileHover={{ scale: 1.03, boxShadow: "0 0 28px rgba(255, 255, 255, 0.22)" }}
+                whileHover={{ scale: 1.03, boxShadow: "0 0 20px rgba(200, 133, 58, 0.3)" }}
                 whileTap={{ scale: 0.98 }}
               >
                 <Link
                   href="/services#contact"
-                  className="block rounded-full bg-white px-5 py-3 text-center font-semibold text-black-950"
+                  className="block rounded-full border border-amber/40 bg-mahogany px-5 py-3 text-center font-semibold text-parchment"
                 >
                   Book Free Call
                 </Link>

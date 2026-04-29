@@ -24,7 +24,7 @@ const stats = ["100% Virtual", "Beginner Focused"];
 
 export default function About() {
   return (
-    <section id="about" className="section-padding bg-black-950">
+    <section id="about" className="section-padding bg-espresso-900">
       <motion.div
         variants={container}
         initial="hidden"
@@ -33,7 +33,7 @@ export default function About() {
         className="section-shell grid items-center gap-12 lg:grid-cols-2"
       >
         <motion.div variants={fadeUp}>
-          <div className="aspect-square overflow-hidden rounded-2xl border-2 border-white bg-black-800 shadow-glow">
+          <div className="aspect-square overflow-hidden rounded-2xl border-2 border-mahogany bg-espresso-800 shadow-glow">
             <img
               src="/josiah-sid-about.png"
               alt="Portrait of Josiah Sid"
@@ -44,14 +44,14 @@ export default function About() {
 
         <motion.div variants={fadeUp}>
           <p className="section-label">Your Teacher</p>
-          <h2 className="mt-4 font-playfair text-4xl font-bold text-white md:text-6xl">
+          <h2 className="mt-4 font-playfair text-4xl font-bold text-parchment md:text-6xl">
             Who You're Learning From
           </h2>
-          <h3 className="mt-7 font-playfair text-3xl font-bold text-white">
+          <h3 className="mt-7 font-playfair text-3xl font-bold text-amber">
             Josiah Sid
           </h3>
 
-          <div className="mt-6 space-y-4 leading-relaxed text-white-muted">
+          <div className="mt-6 space-y-4 leading-relaxed text-parchment-muted">
             <p>
               I've been playing bass in church settings for years. I know the
               worship environment — the pressure of playing live, the importance
@@ -74,7 +74,7 @@ export default function About() {
             {stats.map((stat) => (
               <span
                 key={stat}
-                className="rounded-full border border-white bg-black-800 px-4 py-2 text-sm font-medium text-white"
+                className="rounded-full border border-amber/60 bg-mahogany/20 px-4 py-2 text-sm font-medium text-parchment"
               >
                 {stat}
               </span>

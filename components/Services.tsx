@@ -115,7 +115,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="pricing" className="section-padding bg-black-900">
+    <section id="pricing" className="section-padding bg-espresso-950">
       <motion.div
         variants={container}
         initial="hidden"
@@ -125,10 +125,10 @@ export default function Services() {
       >
         <motion.div variants={fadeUp} className="mx-auto max-w-3xl text-center">
           <p className="section-label">Services</p>
-          <h2 className="mt-4 font-playfair text-4xl font-bold text-white md:text-6xl">
+          <h2 className="mt-4 font-playfair text-4xl font-bold text-parchment md:text-6xl">
             How We Can Work Together
           </h2>
-          <p className="mt-5 text-lg leading-8 text-white-muted">
+          <p className="mt-5 text-lg leading-8 text-parchment-muted">
             Whether you're a complete beginner or preparing for something
             specific, there's a path for you.
           </p>
@@ -139,33 +139,33 @@ export default function Services() {
             <motion.article
               key={service.name}
               variants={fadeUp}
-              className={`relative flex flex-col rounded-2xl bg-black-800 p-6 ${
+              className={`relative flex flex-col rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber/60 hover:shadow-[0_4px_24px_rgba(200,133,58,0.15)] ${
                 service.featured
-                  ? "border-2 border-white shadow-glow md:p-8"
-                  : "border border-black-700"
+                  ? "border-2 border-amber bg-espresso-700 shadow-glow md:p-8"
+                  : "border border-mahogany/50 bg-espresso-800"
               }`}
             >
               {service.badge ? (
-                <span className="absolute right-5 top-5 rounded-full bg-white px-3 py-1 text-xs font-semibold text-black-950">
+                <span className="absolute right-5 top-5 rounded-full bg-amber px-3 py-1 text-xs font-semibold text-espresso-950">
                   {service.badge}
                 </span>
               ) : null}
-              <h3 className="pr-28 font-playfair text-3xl font-bold text-white">
+              <h3 className="pr-28 font-playfair text-3xl font-bold italic text-amber">
                 {service.name}
               </h3>
               <div className="mt-5">
-                <p className="text-3xl font-bold text-white">{service.price}</p>
-                <p className="mt-1 text-sm text-white-muted">
+                <p className="font-playfair text-3xl font-bold text-parchment">{service.price}</p>
+                <p className="mt-1 text-sm text-parchment-muted">
                   {service.duration}
                 </p>
               </div>
-              <p className="mt-5 leading-7 text-white-muted">
+              <p className="mt-5 leading-7 text-parchment-muted">
                 {service.description}
               </p>
-              <ul className="mt-6 space-y-3">
+              <ul className="mt-6 space-y-3 border-t border-mahogany/30 pt-6">
                 {service.features.map((feature) => (
-                  <li key={feature} className="flex gap-3 text-white">
-                    <Check className="mt-0.5 h-5 w-5 flex-none text-white" />
+                  <li key={feature} className="flex gap-3 text-parchment-muted">
+                    <Check className="mt-0.5 h-5 w-5 flex-none text-amber" />
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -173,14 +173,14 @@ export default function Services() {
               <motion.div
                 whileHover={{
                   scale: 1.03,
-                  boxShadow: "0 0 30px rgba(255, 255, 255, 0.22)",
+                  boxShadow: "0 0 20px rgba(200, 133, 58, 0.3)",
                 }}
                 whileTap={{ scale: 0.98 }}
                 className="mt-8"
               >
                 <Link
                   href="#contact"
-                  className="flex w-full justify-center rounded-full bg-white py-4 font-semibold text-black-950 transition hover:bg-white-off"
+                  className="flex w-full justify-center rounded-full border border-amber/40 bg-mahogany py-4 font-semibold text-parchment transition-all duration-300 hover:border-amber hover:bg-mahogany-light"
                 >
                   {service.cta}
                 </Link>
